@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            perspective: 600px;;
+        }
+        .box{
+            width: 400px;
+            height: 400px;
+
+            margin:100px auto;
+            position:relative;
+
+        }
+        .box:hover ul{
+            transform: rotateX(360deg) rotateY(360deg);
+        }
+        ul{
+            width: 400px;
+            height: 400px;
+
+            transform: rotateX(-30deg) rotateY(0deg) ;
+            transform-style: preserve-3d;
+            transition: all 10s linear;
+        }
+        li{
+            list-style: none;
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+            background:rgba(255,56,49,0.5);
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            bottom:0;
+            top: 0;;
+
+        }
+        ul :nth-child(1){
+            transform:rotateY(0deg) translateZ(100px);
+        }
+        ul :nth-child(2){
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+        ul :nth-child(3) {
+            transform: rotateY(-180deg) translateZ(100px);
+        }
+        ul :nth-child(4){
+            transform: rotateY(-270deg) translateZ(100px);
+        }
+        ul :nth-child(5){
+            transform: rotatex(90deg) translateZ(100px);
+        }
+        ul :nth-child(6){
+            transform: rotatex(90deg) translateZ(-100px);
+        }
+
+    </style>
+</head>
+<body>
+<div class="box">
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+</body>
+<!--————————————————
+版权声明：本文为CSDN博主「离梦七海」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/qq_42316954/java/article/details/80684146-->
+</html>
